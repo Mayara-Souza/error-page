@@ -1,1 +1,82 @@
-/*# sourceMappingURL=main.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Outfit, sans-serif;
+  background: conic-gradient(from 90deg at 50% 125%, #20b2aa, #135da5, #0d0895, #4b0082, #4b0082, #0d0895, #135da5, #20b2aa);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./img/background.png");
+  color: #D6D6F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container > main {
+  flex: 1;
+  order: 1;
+  padding: 0 1.5rem 0 2.5rem;
+}
+.container > main button {
+  width: 6.5rem;
+  height: 2.75rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #151557;
+  border: none;
+  border-radius: 999px;
+  text-transform: uppercase;
+  color: #E2E2F5;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.container > main button:last-of-type {
+  margin-left: 1rem;
+  width: 9.6rem;
+}
+@media screen and (max-width: 768px) {
+  .container > main button:last-of-type {
+    display: block;
+    margin: 1rem 0;
+  }
+}
+.container > main button:hover {
+  cursor: pointer;
+  background-color: #212187;
+}
+.container h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 120%;
+  margin-bottom: 1.5rem;
+}
+.container p {
+  font-size: 1.25rem;
+  font-weight: lighter;
+  line-height: 140%;
+  margin-bottom: 3.5rem;
+}
+.container #ilustration {
+  width: 55%;
+  order: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .container #ilustration {
+    flex-direction: column;
+  }
+}
+.container #ilustration > .error-number {
+  font-size: 8rem;
+  font-weight: bold;
+  line-height: 140%;
+  color: #BF7BFB;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,108 @@
+$main-text: #D6D6F2;
+$button-text: #E2E2F5;
+$purple: #BF7BFB;
+$button: #151557;
+$button-hover: #212187;
+$medium: 768px;
+$small: 375px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin button {
+    width: 6.5rem;
+    height: 2.75rem;
+    padding: .75rem 1.5rem;
+    background-color: $button;
+    border: none;
+    border-radius: 999px;
+
+    text-transform: uppercase;
+    color: $button-text;
+    font-size: .8rem;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+
+body{
+    font-family: Outfit, sans-serif;
+    background: conic-gradient(from 90deg at 50% 125%, #20b2aa, #135da5, #0d0895, #4b0082, #4b0082, #0d0895, #135da5, #20b2aa);
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./img/background.png");
+    color: $main-text;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & >main{
+        flex: 1;
+        order: 1;
+
+        padding: 0 1.5rem 0 2.5rem;
+
+        & button{
+            @include button;
+
+            &:last-of-type{
+                margin-left: 1rem;
+                width: 9.6rem;
+
+                @media screen and (max-width: $medium) {
+                    display: block;
+                    margin: 1rem 0;
+                }  
+            }
+
+            &:hover{
+                cursor: pointer;
+                background-color: $button-hover;
+            }
+        }
+    }
+
+    h1{
+        font-size: 2.5rem;
+        font-weight: bold;
+        line-height: 120%;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+        font-weight: lighter;
+        line-height: 140%;
+        margin-bottom: 3.5rem;
+    }
+
+    & #ilustration{
+        width: 55%;
+        order: 2;
+
+        display: flex;
+        
+        @media screen and (max-width: $medium) {
+            flex-direction: column;
+        }        
+        align-items: center;
+        justify-content: center;
+
+        & > .error-number{
+            font-size: 8rem;
+            font-weight: bold;
+
+            line-height: 140%;
+
+            color: $purple;
+        }
+    }
+}
+
