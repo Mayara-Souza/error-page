@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 body {
@@ -21,7 +22,22 @@ body {
 .container > main {
   flex: 1;
   order: 1;
+  position: relative;
+  z-index: 2;
   padding: 0 1.5rem 0 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .container > main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container > main p {
+  font-size: 1.25rem;
+  font-weight: lighter;
+  line-height: 140%;
+  margin-bottom: 3.5rem;
 }
 .container > main button {
   width: 6.5rem;
@@ -56,11 +72,10 @@ body {
   line-height: 120%;
   margin-bottom: 1.5rem;
 }
-.container p {
-  font-size: 1.25rem;
-  font-weight: lighter;
-  line-height: 140%;
-  margin-bottom: 3.5rem;
+@media screen and (max-width: 375px) {
+  .container h1 {
+    font-size: 1.8rem;
+  }
 }
 .container #ilustration {
   width: 55%;
@@ -68,6 +83,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .container #ilustration {
+    width: 40%;
+    position: fixed;
+    opacity: 0.3;
+    z-index: 0;
+  }
 }
 @media screen and (max-width: 768px) {
   .container #ilustration {
